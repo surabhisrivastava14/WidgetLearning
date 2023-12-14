@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="mendix.widgetlearningmendix.Widgetlearningmendix"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Widgetlearningmendix</name>
+    <description>My widget description</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="Static">
+            <!--1. Static Single String-->
+            <property key="staticStr" type="string" required="false">
+                <caption>Static String Single Line</caption>
+                <description>Static String Single Line</description>
+            </property>
+            <!--2. Static Multi Line String-->
+            <property key="staticMultiLineStr" type="string" multiline="true" required="false">
+                <caption>Static String Multi Line</caption>
+                <description>Static String Multi Line</description>
+            </property>
+            <!--3. Static Boolean-->
+            <property key="staticBool" type="boolean" defaultValue="false">
+                <caption>Static Boolean</caption>
+                <description>Static Boolean</description>
+            </property>
+            <!--4. Static Integer-->
+            <property key="staticInt" type="integer" defaultValue="1">
+                <caption>Static Integer</caption>
+                <description>Static Integer</description>
+            </property>
+            <!--5. Static Decimal-->
+            <property key="staticDecimal" type="decimal" defaultValue="1.5">
+                <caption>Static Decimal</caption>
+                <description>Static Decimal</description>
+            </property>
+            <!--6. Static Enumeration-->
+            <property key="staticEnum" type="enumeration" defaultValue="red">
+                <caption>Static Enumeration</caption>
+                <description>Static Enumeration</description>
+                <enumerationValues>
+                    <enumerationValue key="red">Red</enumerationValue>
+                    <enumerationValue key="blue">Blue</enumerationValue>
+                    <enumerationValue key="green">Green</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Component">
+            <!--1. icon component-->
+            <property key="icon" type="icon" required="false">
+                <caption>Icon Component</caption>
+                <description>Icon Component</description>
+            </property>
+            <!--2. image component-->
+            <property key="productImage" type="image" required="false">
+                <caption>Image Component</caption>
+                <description>Image Component</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Dynamic">
+            <!--1. Expression Type-->
+            <property key="priceColor" type="expression" defaultValue="red">
+                <caption>Expression Type</caption>
+                <description>Expression Type</description>
+                <returnType type="String" />
+            </property>
+            <!--2. Text Template Type-->
+            <property key="textTemp" type="textTemplate">
+                <caption>Text Template Type</caption>
+                <description>Text Template Type</description>
+                <translations>
+                    <translation lang="en_US">Product</translation>
+                    <translation lang="tr_TR">Urun</translation>
+                </translations>
+            </property>
+            <!--3. Widget Type-->
+            <property key="widgetContent" type="widgets" required="false">
+                <caption>Widget Type</caption>
+                <description>Widget Type</description>
+            </property>
+            <!--4. Action Widget Type-->
+            <property key="changePrice" type="action">
+                <caption>Action Widget Type</caption>
+                <description>Action Widget Type</description>
+            </property>
+            <!--5. Attribute Widget Type-->
+            <property key="productPrice" type="attribute">
+                <caption>Attribute Widget Type</caption>
+                <description>Attribute Widget Type</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                    <attributeType name="Integer" />
+                </attributeTypes>
+            </property>
+            <!--6. Object Widget Type-->
+            <property key="objectType" type="object" isList="true">
+                <caption>Object Widget Type</caption>
+                <description>Object Widget Type</description>
+                <properties>
+                    <propertyGroup caption="Object List">
+                        <property key="objectBool" type="boolean" defaultValue="false">
+                            <caption>Object Bool</caption>
+                            <description>Object Bool</description>
+                        </property>
+                        <property key="objectString" type="string" defaultValue="Object String">
+                            <caption>Object String</caption>
+                            <description>Object String</description>
+                        </property>
+                        <property key="objectAction" type="action">
+                            <caption>Object String</caption>
+                            <description>Object String</description>
+                        </property>
+                    </propertyGroup>
+                </properties>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
